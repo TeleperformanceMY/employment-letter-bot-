@@ -16,9 +16,9 @@ document.getElementById('user-info-form').addEventListener('submit', function(ev
 });
 
 function sendDataToPowerAutomate(userData) {
-    // You can use fetch or XMLHttpRequest to send data to Power Automate
-    // Here, I'm using fetch as an example
-    fetch('YOUR_FLOW_ENDPOINT_URL', {
+    const flowEndpointUrl = 'https://prod-26.southeastasia.logic.azure.com:443/workflows/18c6124905004d1cac1b994424e605b3/triggers/manual/paths/invoke?api-version=2016-06-01';
+
+    fetch(flowEndpointUrl, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
